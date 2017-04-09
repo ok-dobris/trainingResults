@@ -6,3 +6,4 @@ project/plugins/project/
 .cache
 .lib/
 .idea/
+/data/*
