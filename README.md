@@ -13,7 +13,8 @@ V SQL Monitoru zadat:
 
 Příp. přidat `cards.stageId`.
 
+Použít v kontextovém menu Export / CSV, změnit oddělovač polí na čárku.
 
-Udělat copy special, změnit oddělovač polí na čárku.
-
-Potom nahradit \n odřádkováním (zatím nutno ručně) a doplnit záhlaví.
+- Dát soubor data.csv do adresáře data
+- spustit Main
+- v souboru data-out.csv jsou výsledky
