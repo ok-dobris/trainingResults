@@ -1,20 +1,29 @@
+Výsledky tréninky - více výsledků na osobu
+==========================================
+
+Program vznikl k vyhodnocení měřeného XC okruhu, kde je třeba pro jednoho závodníka znát výsledky
+z více běhů na stejné trati. 
+
 Návod k použití
 ===============
+- V QuickEventu normálně měříme časy, jako když se pořádá závod.
 
-- data.csv vznikne exportem z QuickEvent aplikace, musejí vzniknout sloupce:
+- z QuickEvent aplikace, vyexportujeme data.csv musejí vzniknout sloupce:
 
-    firstName,lastName,NAME,siId,startTime,finishTime,punches
+    `firstName,lastName,NAME,siId,startTime,finishTime,punches`
 
-V SQL Monitoru zadat:
+    V SQL Monitoru zadat:
 
+    ```sql
     SELECT firstName,lastName,NAME,cards.siId,startTime,finishTime,punches
     FROM main.cards JOIN main.competitors JOIN main.runs JOIN main.classes
     ON main.cards.runId == main.runs.id AND main.runs.competitorId == main.competitors.id AND main.competitors.classId == main.classes.id
+    ```
 
-Příp. přidat `cards.stageId`.
+    Příp. přidat ještě `cards.stageId`.
 
-Použít v kontextovém menu Export / CSV, změnit oddělovač polí na čárku.
+    Použít v kontextovém menu `Export` / `CSV`, změnit oddělovač polí na čárku.
 
-- Dát soubor data.csv do adresáře data
-- spustit Main
-- v souboru data-out.csv jsou výsledky
+- Dát soubor `data.csv` do adresáře `data` (aby byl na relativní cestě `data/data.csv`)
+- spustit `Main`
+- v souboru `data/data-out.csv` jsou výsledky
