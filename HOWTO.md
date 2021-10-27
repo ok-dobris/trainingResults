@@ -40,3 +40,10 @@
  (V LibreOffice se přehazování dělá pomocí Cut / Paste a vkládání a mazání sloupců)
  - dáme Uložit jako CSV, kódování: UTF-8, oddělovač řádků: čárka, oddělovač řetězců: uvozovky 
  - v QuickEvent dáme Soubor / Importovat / Textový soubor / Seznam závodníků ve formátu CSV
+ 
+ # Zpracování výsledků
+ 
+ Postup vlastního zpracování viz README.md
+ 
+ Data ze souboru `data/data-out.csv` vložit do tabulky, šikovná je třeba Testovací okruh YYYY-MM.xlsx
+ 
