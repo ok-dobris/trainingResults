@@ -16,8 +16,8 @@ Návod k použití
 
     ```sql
     SELECT firstName,lastName,NAME,cards.siId,startTime,finishTime,punches
-    FROM main.cards JOIN main.competitors JOIN main.runs JOIN main.classes
-    ON main.cards.runId == main.runs.id AND main.runs.competitorId == main.competitors.id AND main.competitors.classId == main.classes.id
+    FROM main.cards JOIN main.competitors JOIN main.classes
+    ON main.cards.siId == main.competitors.siId AND main.competitors.classId == main.classes.id
     ```
 
     Příp. přidat ještě `cards.stageId`.
